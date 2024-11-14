@@ -246,20 +246,20 @@ public class PigPenCipher{
                     "@     @");
 
             pigpenCodeMap.put('X', "@   \n" +
-                    "@ \n" +
-                    "O  @\n" +
-                    "@ \n" +
-                    "@     ");
+                                     "@ \n" +
+                                   "O  @\n" +
+                                     "@ \n" +
+                                   "@     ");
 
             pigpenCodeMap.put('Y', "@  \n" +
-                    "@    \n" +
-                    "@  o  \n" +
-                    "@    \n" +
-                    "@  ");
+                                 "@    \n" +
+                               "@  o  \n" +
+                                 "@    \n" +
+                                   "@  ");
 
-            pigpenCodeMap.put('Z', "@      @  \n" +
-                    "  @ o @   \n" +
-                    "    @       ");
+            pigpenCodeMap.put('Z', "@     @  \n" +
+                                  "  @ o @   \n" +
+                                  "    @       ");
 
 
             StringBuilder result = new StringBuilder();
