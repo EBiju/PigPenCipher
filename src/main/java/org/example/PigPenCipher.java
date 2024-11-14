@@ -1,7 +1,9 @@
+package org.example;
+
 import java.util.HashMap;
 import java.util.Scanner;
 
-public class PigPenCipher {
+public class PigPenCipher{
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
@@ -19,32 +21,117 @@ public class PigPenCipher {
 
     public static String encryptPigPen(String text) {
         HashMap<Character, String> pigpenCodeMap = new HashMap<>();
-        pigpenCodeMap.put('A', "_|");
-        pigpenCodeMap.put('B', "|_|");
-        pigpenCodeMap.put('C', "|_");
-        pigpenCodeMap.put('D', "=|");
-        pigpenCodeMap.put('E', "|=|");
-        pigpenCodeMap.put('F', "|=");
-        pigpenCodeMap.put('G', "-|");
-        pigpenCodeMap.put('H', "|-|");
-        pigpenCodeMap.put('I', "|-");
-        pigpenCodeMap.put('J', "*_|");
-        pigpenCodeMap.put('K', "|*_|");
-        pigpenCodeMap.put('L', "|_*");
-        pigpenCodeMap.put('M', "*=|");
-        pigpenCodeMap.put('N', "|*=|");
-        pigpenCodeMap.put('O', "|=*");
-        pigpenCodeMap.put('P', "*-|");
-        pigpenCodeMap.put('Q', "|*-|");
-        pigpenCodeMap.put('R', "|-*");
-        pigpenCodeMap.put('S', "V");
-        pigpenCodeMap.put('T', ">");
-        pigpenCodeMap.put('U', "<");
-        pigpenCodeMap.put('V', "A");
-        pigpenCodeMap.put('W', "*V");
-        pigpenCodeMap.put('X', "*>");
-        pigpenCodeMap.put('Y', "<*");
-        pigpenCodeMap.put('Z', "*A");
+        pigpenCodeMap.put('A', "       @\n" +
+                "             @\n" +
+                "@  @  @  ");
+
+        pigpenCodeMap.put('B', "@     @\n" +
+                "@     @\n" +
+                "@  @  @  ");
+
+        pigpenCodeMap.put('C', "@\n      " +
+                "@\n      " +
+                "@  @  @  ");
+
+        pigpenCodeMap.put('D', "@  @  @\n " +
+                "             @\n " +
+                "@  @  @   ");
+
+        pigpenCodeMap.put('E', "@  @  @\n" +
+                "@     @\n" +
+                "@  @  @  ");
+
+        pigpenCodeMap.put('F', "@  @  @\n" +
+                "@\n      " +
+                "@  @  @  ");
+
+        pigpenCodeMap.put('G', "@  @  @\n " +
+                "             @\n " +
+                "             @\n ");
+
+        pigpenCodeMap.put('H', "@  @  @\n " +
+                "@     @\n " +
+                "@     @   ");
+
+        pigpenCodeMap.put('I', "@  @  @\n " +
+                "@ +\n     " +
+                "               @         ");
+
+        pigpenCodeMap.put('J', "      @\n " +
+                "       o  @\n " +
+                "@  @  @   ");
+
+        pigpenCodeMap.put('K', "@     @\n " +
+                "@  o  @\n " +
+                "@  @  @   ");
+
+        pigpenCodeMap.put('L', "@\n       " +
+                "@  o\n    " +
+                "@  @  @   ");
+
+        pigpenCodeMap.put('M', "@  @  @\n " +
+                "      o  @\n " +
+                "@  @  @   ");
+
+        pigpenCodeMap.put('N', "@  @  @\n " +
+                "@  O  @\n " +
+                "@  @  @   ");
+
+        pigpenCodeMap.put('O', "@  @  @\n " +
+                "@  o   \n " +
+                "@  @  @   ");
+
+        pigpenCodeMap.put('P', "@  @  @\n " +
+                "      O   @\n " +
+                "             @   ");
+
+        pigpenCodeMap.put('Q', "@  @  @\n " +
+                "@  O  @\n " +
+                "@     @   ");
+
+        pigpenCodeMap.put('R', "@  @  @\n " +
+                "@  O\n    " +
+                "@         ");
+
+        pigpenCodeMap.put('S', "@\n        " +
+                "@   @\n      " +
+                "@     @       ");
+
+        pigpenCodeMap.put('T', "@\n       " +
+                "@\n     " +
+                "@ \n   " +
+                "@\n     " +
+                "@         ");
+
+        pigpenCodeMap.put('U', "@ \n" +
+                "@   \n" +
+                "@     \n" +
+                "@   \n" +
+                "@   ");
+
+        pigpenCodeMap.put('V', "@      @ \n" +
+                "@   @  \n" +
+                "@    ");
+
+        pigpenCodeMap.put('W', "@   \n" +
+                "@ o @ \n" +
+                "@     @");
+
+        pigpenCodeMap.put('X', "@   \n" +
+                "@ \n" +
+                "O  @\n" +
+                "@ \n" +
+                "@     ");
+
+        pigpenCodeMap.put('Y', "@  \n" +
+                "@    \n" +
+                "@  o  \n" +
+                "@    \n" +
+                "@  ");
+
+        pigpenCodeMap.put('Z', "@      @  \n" +
+                "  @ o @   \n" +
+                "    @       ");
 
 
         StringBuilder pigpenCodeBuilder = new StringBuilder();
@@ -58,35 +145,122 @@ public class PigPenCipher {
             }
         }
 
+        return pigpenCodeBuilder.toString().trim();
 
-        public static String decryptPigPen(String text) {
-            HashMap<String, Character> pigpenToCharMap = new HashMap<>();
-            pigpenCodeMap.put('A', "_|");
-            pigpenCodeMap.put('B', "|_|");
-            pigpenCodeMap.put('C', "|_");
-            pigpenCodeMap.put('D', "=|");
-            pigpenCodeMap.put('E', "|=|");
-            pigpenCodeMap.put('F', "|=");
-            pigpenCodeMap.put('G', "-|");
-            pigpenCodeMap.put('H', "|-|");
-            pigpenCodeMap.put('I', "|-");
-            pigpenCodeMap.put('J', "*_|");
-            pigpenCodeMap.put('K', "|*_|");
-            pigpenCodeMap.put('L', "|_*");
-            pigpenCodeMap.put('M', "*=|");
-            pigpenCodeMap.put('N', "|*=|");
-            pigpenCodeMap.put('O', "|=*");
-            pigpenCodeMap.put('P', "*-|");
-            pigpenCodeMap.put('Q', "|*-|");
-            pigpenCodeMap.put('R', "|-*");
-            pigpenCodeMap.put('S', "V");
-            pigpenCodeMap.put('T', ">");
-            pigpenCodeMap.put('U', "<");
-            pigpenCodeMap.put('V', "A");
-            pigpenCodeMap.put('W', "*V");
-            pigpenCodeMap.put('X', "*>");
-            pigpenCodeMap.put('Y', "<*");
-            pigpenCodeMap.put('Z', "*A");
+        public static String decryptPigPen(text String){
+            HashMap<Character, String> pigpenCodeMap = new HashMap<>();
+            pigpenCodeMap.put('A', "       @\n" +
+                    "             @\n" +
+                    "@  @  @  ");
+
+            pigpenCodeMap.put('B', "@     @\n" +
+                    "@     @\n" +
+                    "@  @  @  ");
+
+            pigpenCodeMap.put('C', "@\n      " +
+                    "@\n      " +
+                    "@  @  @  ");
+
+            pigpenCodeMap.put('D', "@  @  @\n " +
+                    "             @\n " +
+                    "@  @  @   ");
+
+            pigpenCodeMap.put('E', "@  @  @\n" +
+                    "@     @\n" +
+                    "@  @  @  ");
+
+            pigpenCodeMap.put('F', "@  @  @\n" +
+                    "@\n      " +
+                    "@  @  @  ");
+
+            pigpenCodeMap.put('G', "@  @  @\n " +
+                    "             @\n " +
+                    "             @\n ");
+
+            pigpenCodeMap.put('H', "@  @  @\n " +
+                    "@     @\n " +
+                    "@     @   ");
+
+            pigpenCodeMap.put('I', "@  @  @\n " +
+                    "@ +\n     " +
+                    "               @         ");
+
+            pigpenCodeMap.put('J', "      @\n " +
+                    "       o  @\n " +
+                    "@  @  @   ");
+
+            pigpenCodeMap.put('K', "@     @\n " +
+                    "@  o  @\n " +
+                    "@  @  @   ");
+
+            pigpenCodeMap.put('L', "@\n       " +
+                    "@  o\n    " +
+                    "@  @  @   ");
+
+            pigpenCodeMap.put('M', "@  @  @\n " +
+                    "      o  @\n " +
+                    "@  @  @   ");
+
+            pigpenCodeMap.put('N', "@  @  @\n " +
+                    "@  O  @\n " +
+                    "@  @  @   ");
+
+            pigpenCodeMap.put('O', "@  @  @\n " +
+                    "@  o   \n " +
+                    "@  @  @   ");
+
+            pigpenCodeMap.put('P', "@  @  @\n " +
+                    "      O   @\n " +
+                    "             @   ");
+
+            pigpenCodeMap.put('Q', "@  @  @\n " +
+                    "@  O  @\n " +
+                    "@     @   ");
+
+            pigpenCodeMap.put('R', "@  @  @\n " +
+                    "@  O\n    " +
+                    "@         ");
+
+            pigpenCodeMap.put('S', "@\n        " +
+                    "@   @\n      " +
+                    "@     @       ");
+
+            pigpenCodeMap.put('T', "@\n       " +
+                    "@\n     " +
+                    "@ \n   " +
+                    "@\n     " +
+                    "@         ");
+
+            pigpenCodeMap.put('U', "@ \n" +
+                    "@   \n" +
+                    "@     \n" +
+                    "@   \n" +
+                    "@   ");
+
+            pigpenCodeMap.put('V', "@      @ \n" +
+                    "@   @  \n" +
+                    "@    ");
+
+            pigpenCodeMap.put('W', "@   \n" +
+                    "@ o @ \n" +
+                    "@     @");
+
+            pigpenCodeMap.put('X', "@   \n" +
+                    "@ \n" +
+                    "O  @\n" +
+                    "@ \n" +
+                    "@     ");
+
+            pigpenCodeMap.put('Y', "@  \n" +
+                    "@    \n" +
+                    "@  o  \n" +
+                    "@    \n" +
+                    "@  ");
+
+            pigpenCodeMap.put('Z', "@      @  \n" +
+                    "  @ o @   \n" +
+                    "    @       ");
+
 
             StringBuilder result = new StringBuilder();
             String[] words = text.split(" ");
@@ -102,7 +276,7 @@ public class PigPenCipher {
                     }
                 result.append(" ");
             }
-
             return result.toString().trim();
         }
     }
+}
